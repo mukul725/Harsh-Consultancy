@@ -1,0 +1,132 @@
+.why-us {
+  margin: 0 3.7rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    margin: 0;
+  }
+  .about-us {
+    flex: 0 0 48%;
+    margin-right: 3.5rem;
+    padding: 0 2.5rem;
+    @include respond(tab-port) {
+      flex: 1;
+      margin-right: 0;
+      padding: 0 5rem;
+    }
+
+    &__heading {
+      font-size: 3rem;
+      letter-spacing: 0.3rem;
+      font-weight: 700;
+      margin-bottom: 3.4rem;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-white, 0.78),
+        rgba($color-white-1, 0.86)
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    &__content {
+      color: rbga($color-grey-dark-2, 0.9);
+      font-size: 1.5rem;
+      line-height: 2.5;
+      letter-spacing: 0.14rem;
+      @include respond(tab-port) {
+        letter-spacing: 0.2rem;
+        line-height: 3;
+      }
+    }
+  }
+
+  .benefit-container {
+    flex: 1;
+
+    .benefit {
+      margin-top: 4rem;
+      padding: 3.8rem 2.5rem;
+      border: 1px solid rgba($color-white, 0.7);
+      border-radius: 8px;
+      box-shadow: 0 1.4rem 4rem rgba($color-grey-dark-5, 0.23);
+      background-color: rgba($color-white-2, 0.97);
+
+      @include respond(tab-land) {
+        text-align: center;
+      }
+      @include respond(tab-port) {
+        padding: 7rem;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: inherit;
+      }
+
+      &__heading {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 2.5rem;
+        letter-spacing: 0.3rem;
+        margin-left: 0.6rem;
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-grey-dark-2, 0.84),
+          rgba($color-grey-dark-5, 0.94)
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+
+        @include respond(tab-port) {
+          background-image: linear-gradient(
+            to right bottom,
+            rgba($color-white-1, 0.84),
+            rgba($color-white-2, 0.94)
+          );
+          text-align: center;
+          margin-bottom: 7rem;
+          margin-left: 0;
+        }
+      }
+
+      &__list {
+        font-size: $default-font-size;
+        letter-spacing: 0.1rem;
+        list-style: none;
+        color: rgba($color-grey-dark-3, 0.8);
+
+        display: flex;
+        flex-direction: column;
+
+        :not(:last-child) {
+          margin-bottom: 2.7rem;
+          @include respond(tab-port) {
+            margin-bottom: 5rem;
+          }
+        }
+
+        @include respond(tab-port) {
+          font-size: 1.7rem;
+          letter-spacing: 0.4rem;
+          align-items: center;
+        }
+      }
+
+      &__item {
+        flex: 1;
+        &::before {
+          content: "";
+          display: inline-block;
+          height: 1.4rem;
+          width: 1.4rem;
+          margin: 0.8rem 0.5rem 0 0;
+          background-image: url(../img/chevron-thin-right.svg);
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

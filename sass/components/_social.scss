@@ -1,0 +1,58 @@
+.social {
+  list-style: none;
+  display: flex;
+
+  &__item {
+    margin-right: 2rem;
+  }
+
+  &__link {
+    &:visited,
+    &:link {
+      text-decoration: none;
+      cursor: pointer;
+      display: flex;
+      transform: scale(1);
+      transition: transform 0.1s, color 0.1s ease-in;
+    }
+
+    &:hover,
+    &:active {
+      transform: scale(1.02);
+    }
+
+    &-facebook {
+      color: lighten($color-social-facebook, 2%);
+      &:hover {
+        color: lighten($color-social-facebook, 9%);
+      }
+    }
+
+    &-twitter {
+      color: darken($color-social-twitter, 4%);
+
+      &:hover {
+        color: lighten($color-social-twitter, 1%);
+      }
+    }
+
+    &-insta {
+      color: darken($color-social-insta, 6%);
+
+      &:hover {
+        color: lighten($color-social-insta, 1%);
+      }
+    }
+  }
+
+  &__icon {
+    height: 2.2rem;
+    width: 2.2rem;
+    fill: currentColor;
+
+    @include respond(tab-port) {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+}

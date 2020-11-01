@@ -1,0 +1,102 @@
+.service {
+  padding: 4rem 1.7rem;
+  display: flex;
+
+  @include respond(tab-land) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 8rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+    padding: 0 3rem;
+  }
+
+  &__box {
+    padding: 2.9rem 3.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    // background-color: rgba($color-white, 0.55);
+    background-image: linear-gradient(
+      4deg,
+      rgba($color-white-1, 0.5) 0%,
+      rgba($color-white-1, 0.5) 36%,
+      rgba($color-grey-dark-4, 0.27) 100%
+    );
+    background-size: 100%;
+    border-radius: 5px;
+    box-shadow: $shadow-light;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: transform 0.3s ease-in-out;
+
+    @include respond(tab-land) {
+      padding: 5rem;
+
+      flex: 0 0 45%;
+      margin-bottom: 4rem;
+    }
+
+    @include respond(phone) {
+      flex: 1;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 1.42rem;
+
+      @include respond(tab-land) {
+        margin-right: 0;
+      }
+
+      @include respond(phone) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-1.3rem) scale(1.03);
+    }
+  }
+
+  &__icon {
+    color: rgba($color-black, 0.84);
+    width: 8rem;
+    height: 8rem;
+    flex: 0 0 9.4rem;
+    fill: currentColor;
+  }
+
+  &__heading {
+    font-size: 1.85rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-grey-dark-2, 0.83),
+      rgba($color-grey-dark-3, 0.9)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+
+    flex: 0 0 10rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    color: rgba($color-grey-dark-4, 0.74);
+    line-height: 1.9;
+    letter-spacing: 1.9px;
+    font-size: 1.37rem;
+
+    flex: 1;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "harsh-consultancy",
+  "version": "1.0.0",
+  "description": "consultancy website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "mukul",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.0.0",
+    "node-sass": "^4.14.1"
+  }
+}
