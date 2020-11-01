@@ -1,9 +1,9 @@
 .footer {
   background-color: rgba($color-black, 0.9);
-  padding: 10rem 5rem 8rem;
+  padding: 4rem;
   overflow: hidden;
   &__logo {
-    height: 9rem;
+    height: 7rem;
   }
   &__content {
     text-transform: uppercase;
@@ -24,7 +24,7 @@
 
     @include respond(tab-port) {
       flex: 1;
-      margin-bottom: 8rem;
+      margin-bottom: 5rem;
     }
 
     .footer__heading {

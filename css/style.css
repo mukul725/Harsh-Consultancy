@@ -541,10 +541,10 @@ body {
 
 .footer {
   background-color: rgba(0, 0, 0, 0.9);
-  padding: 10rem 5rem 8rem;
+  padding: 4rem;
   overflow: hidden; }
   .footer__logo {
-    height: 9rem; }
+    height: 7rem; }
   .footer__content {
     text-transform: uppercase;
     padding: 6rem;
@@ -561,7 +561,7 @@ body {
     @media only screen and (max-width: 56.25em) {
       .footer__about {
         flex: 1;
-        margin-bottom: 8rem; } }
+        margin-bottom: 5rem; } }
     .footer__about .footer__heading {
       font-size: 2.3rem;
       letter-spacing: 0.4rem;
